@@ -1,0 +1,79 @@
+import java.util.*;
+class InvalidRollNumberException extends Exception
+{
+	public InvalidRollNumberException(String str)
+	{
+		super(str);
+	}
+}
+
+class InvalidBranchNameException extends Exception
+{
+	public InvalidBranchNameException(String str)
+	{
+		super(str);
+	}
+}
+
+class InvalidBranchCodeException extends Exception
+{
+	public InvalidBranchCodeException(String str)
+	{
+		super(str);
+	}
+}
+
+class UserDefinedExceptions
+{
+	public static void main(String args[])
+	{
+		try
+		{
+			String bname,rno;
+			int bcode;
+			Scanner s = new Scanner(System.in);
+			System.out.println("Enter Roll Number : ");
+			rno=s.next();
+			if(rno.length() != 10)
+			{
+				throw new InvalidRollNumberException("Invalid Roll Number");
+			}
+			else
+			{
+				System.out.println("Roll Number : "+rno);
+			}
+			System.out.println("Enter Branch Name : ");
+			bname=s.next();
+			if(bname.equals("CSE") != true)
+			{
+				throw new InvalidBranchNameException("Invalid Branch Name");
+			}
+			else
+			{
+				System.out.println("Branch Name : "+bname);
+			}
+			System.out.println("Enter Branch Code : ");
+			bcode=s.nextInt();
+			if(bcode != 5)
+			{
+				throw new InvalidBranchCodeException("Invalid Code");
+			}
+			else
+			{
+				System.out.println("Branch code : "+bcode);
+			}
+		}
+		catch(InvalidRollNumberException e)
+		{
+			System.out.println(e);
+		}
+		catch(InvalidBranchNameException e)
+		{
+			System.out.println(e);
+		}
+		catch(InvalidBranchCodeException e)
+		{
+			System.out.println(e);
+		}
+	}
+}
