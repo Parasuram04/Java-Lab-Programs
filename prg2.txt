@@ -1,0 +1,16 @@
+import java.io.*;
+import java.util.*;
+class prg2
+{
+    public static void main(String args[])
+    {
+	int n;
+	System.out.println("Enter a Decimal number = ");
+	Scanner sc = new Scanner(System.in);
+	n=sc.nextInt();
+	String a = String.format("%08d",Integer.valueOf(Integer.toString(n,2)));
+	System.out.println("Binary Number for "+n+" = "+a);
+    }
+}
+
+	

@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+class prg5a
+{
+	public static void main(String args[])
+	{
+		int a,b;
+		Scanner sc = new Scanner(System.in);
+		ac ob = new ac();
+		System.out.println("Enter a value = ");
+		a=sc.nextInt();
+		System.out.println("Enter b value = ");
+		b=sc.nextInt();
+		System.out.println();
+		System.out.println("Values before calling: A = "+a+" B = "+b);
+		System.out.println();
+		System.out.println("Before Swapping: A = "+a+" B = "+b);
+		System.out.println();
+		ob.swap(a,b);
+		System.out.println();
+		System.out.println("Values after calling: A = "+a+" B = "+b);
+	}
+}
+
+class ac
+{
+	int x,y,t;
+	void swap(int x,int y)
+	{
+		t=x;
+		x=y;
+		y=t;
+		System.out.println("Values after Swapping: A = "+x+" B = "+y);
+	}
+}

@@ -1,0 +1,50 @@
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+abstract class shapes
+{
+	abstract void numberOfSides()
+	{
+		numberOfsides(int k)
+		{
+			int a;
+			k=a;
+		}
+	
+	}
+}
+class Trapezoid extends shapes
+{
+	void numberOfSides(int x)
+	{
+		System.out.println("noof sides in trapezoid:"+x);
+	}
+}
+class triangle extends shapes
+{
+	 void numberOfSides(int y)
+	{
+		System.out.println("noof sides in triangle:"+y);
+	}
+}
+class rectangle extends shapes
+{
+	void numberOfSides(int z)
+	{
+		System.out.println("noof sides in rectangle:"+z);
+	}
+}
+class prg7
+{
+	public static void main(String args[])
+	{
+		Trapezoid t=new Trapezoid();
+		triangle tal=new triangle();
+		rectangle r=new rectangle();
+		t.numberOfSides();
+		tal.numberOfSides();
+		r.numberOfSides();
+	}
+}
+
+

@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+import java.lang.*;
+class prg1
+{
+    public static void main(String args[])
+    {
+	int n,i,j,count=0,sum;
+	int a[] = new int[100];
+	int b[] = new int[100];
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter no of elements = ");
+	n=sc.nextInt();
+	System.out.println("Enter "+n+" elements = ");
+	for(i=0;i<n;i++)
+	{
+	    a[i]=sc.nextInt();
+	}
+	for(i=0;i<n;i++)
+	{
+	    sum=0;
+	    for(j=1;j<10;j++)
+	    {
+		sum=sum+(int)Math.pow(7,j);
+		if(a[i]==sum)
+		{
+		    b[count]=a[i];
+		    count++;
+		    break;
+		}
+	    }
+	}
+	System.out.println("Total Lucky Numbers = "+count);
+	System.out.println("Lucky Numbers = ");
+	for(i=0;i<count;i++)
+	{
+	    System.out.print(b[i]+" ");
+	}
+    }
+}

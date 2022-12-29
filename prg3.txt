@@ -1,0 +1,57 @@
+import java.io.*;
+import java.util.*;
+class prg3
+{
+    public static void main(String args[])
+    {
+	int i,n;
+	double credits[]=new double[10];
+	String sub[]=new String[10];
+	int gp[]=new int[10];
+	char grade[]=new char[10];
+	double s1=0,s2=0,sgpa;
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter no of subjects ");
+	n=sc.nextInt();
+	for(i=0;i<n;i++)
+	{
+	    System.out.print("Enter Subject name = ");
+	    sub[i]=sc.next();
+	    System.out.print("Enter Credits in "+sub[i]+" = ");
+	    credits[i]=sc.nextDouble();
+	}
+	for(i=0;i<n;i++)	
+	{
+	    System.out.println("Enter grade in "+sub[i]+" = ");
+	    gp[i]=sc.next().charAt(0);
+	}
+	for(i=0;i<n;i++)
+	{
+	    switch(grade[i])
+	    {
+		case 'O':gp[i]=10;
+			break;
+		case 'A': gp[i]=9;
+			break;
+		case 'B': gp[i]=8;
+			break;
+		case 'C': gp[i]=7;
+			break;
+		case 'D': gp[i]=6;
+			break;
+		case 'E': gp[i]=5;
+			break;
+		default:System.out.println("You Failed");
+			break;
+	    }
+	}
+	for(i=0;i<n;i++)
+	{
+	    s1=s1+(credits[i]*gp[i]);
+	    s2=s2+credits[i];
+	}
+	sgpa=s1/s2;
+	System.out.println("GRADE = "+sgpa);
+    }
+}
+
